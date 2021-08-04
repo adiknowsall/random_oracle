@@ -24,3 +24,6 @@ Query:
 -1
 exiting...
 ~$  
+
+
+So my solution works on this basis: I use a random (can be any number, even 1111...) 16 digit number. Then everytime I get a (new) query number, I generate bitwise equal to operation's result between the query num and the original num. Now the thing is that every number will have a different result (by contradiction). And at the place where they differ, the range of possible hex digits is different! So this ensures a different hash for every query number. (Note that existing ones are stored in the SQL table)
